@@ -1,10 +1,10 @@
-node {
-	stage(build)
-		{
-			touch a b c
-		}
-	stage(publish)
-		{
-			ls -l a b c
-		}
+pipeline {
+    agent { docker { image 'python:3.5.1' } }
+    stages {
+        stage('build') {
+            steps {
+                sh 'python --version'
+            }
+        }
+    }
 }
