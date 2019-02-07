@@ -1,5 +1,4 @@
 node {
- pipeline{
 	stage(build)
 		{
 			touch a b c
@@ -8,5 +7,4 @@ node {
 		{
 			ls -l a b c
 		}
-}
 }
