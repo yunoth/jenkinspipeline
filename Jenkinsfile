@@ -1,8 +1,5 @@
 pipeline {
     agent any
-    options {
-        timestamps()
-    }
     environment {
         IMAGE = "custom-tutum"
     }
