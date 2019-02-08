@@ -26,7 +26,7 @@ pipeline {
             steps {
                 script {
                     // https://hub.docker.com/r/tutum/hello-world/
-                    def container = tutum_image.run('-p 80')
+                    def container = tutum.image.run('-p 80')
                     println image.id + " container is running at host port, " + container.port(80)
                     image.tag("${GIT_HASH}")
                     if ( "${env.BRANCH_NAME}" == "master" ) {
