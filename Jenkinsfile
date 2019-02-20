@@ -1,8 +1,11 @@
 pipeline {
  agent any
 stages {
-	step('first'){
+	stage('first'){
+	steps{
+		script{
 		echo "training 1"
 	}
 	}
 }
+}}
