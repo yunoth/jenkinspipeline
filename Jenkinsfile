@@ -1,11 +1,10 @@
 pipeline {
- agent docker-slave
-stages {
-	stage('first'){
-	steps{
-		script{
-		echo "training 1"
-	}
-	}
+    agent { docker { image 'golang' } }
+    stages {
+        stage('build') {
+            steps {
+               sh 'go version'
+            }
+        }
+    }
 }
-}}
